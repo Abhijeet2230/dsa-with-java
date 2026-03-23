@@ -2,7 +2,7 @@ package array;
 
 import java.util.Arrays;
 
-public class Convert1DArrayInto1D {
+public class Convert1DArrayInto2D {
 
     public static void main(String[] args) {
 
