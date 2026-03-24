@@ -1,12 +1,18 @@
 package string;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 public class ReverseString {
 
     public static void main(String[] args) {
 
+        char[] st = {'h','e','l','l','o'};
+        reverseString(st);
+        System.out.println(Arrays.toString(st));
     }
 
-    public void reverseString(char[] s) {
+    public static void reverseString(char[] s) {
         int start = 0 ;
         int end = s.length-1;
 

@@ -13,7 +13,6 @@ public class TwoSum {
         int[] arr = {2,9,11,7};
 
         System.out.println(Arrays.toString(twoSum(arr,9)));
-        System.out.println(Arrays.toString(sortedArrayTwoSum(arr,9)));
         System.out.println(Arrays.toString(bruteForceTwoSum(arr,9)));
     }
 
@@ -36,30 +35,12 @@ public class TwoSum {
 
     }
 
-    //if array is storted
-    public static int[] sortedArrayTwoSum(int[] arr, int target){
-        int start = 0;
-        int end = arr.length-1;
-        for(int i = 0 ;i<arr.length;i++){
-            int sum  = arr[start]+arr[end];
-            if(sum==target){
-                return new int[]{start,end};
-            }else if(sum<target){
-                end--;
-            }else{
-                start++;
-            }
-        }
-        return new int[] {};
-    }
-
-
     public static int[] bruteForceTwoSum(int[] nums, int target) {
+
         for(int i =0;i<nums.length;i++){
             for(int j=i+1;j<nums.length;j++)
                 if(nums[i]+nums[j]== target ){
                    return new int[] {i,j};
-
                 }
         }
         return new int[] {};

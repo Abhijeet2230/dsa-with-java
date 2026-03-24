@@ -2,8 +2,6 @@ package array;
 
 import java.util.HashSet;
 
-//leetcode = https://leetcode.com/problems/contains-duplicate/
-
 public class ContainDuplicate {
     public static void main(String[] args) {
 
