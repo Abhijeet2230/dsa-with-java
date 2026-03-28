@@ -4,9 +4,17 @@ public class LL {
 
     private Node head;
 
+    public Node getHead(){
+        return head;
+    }
+
+    public void setHead(Node head){
+        this.head = head;
+    }
+
     public static class Node {
-        private int val;
-        private Node next;
+        int val;
+        Node next;
 
         public Node(int val) {
             this.val = val;
