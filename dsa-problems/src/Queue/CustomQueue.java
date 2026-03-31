@@ -1,3 +1,5 @@
+package Queue;
+
 public class CustomQueue {
     int[] data;
     int size;
@@ -9,13 +11,12 @@ public class CustomQueue {
         this(DEFAULT_SIZE);
     }
 
-
     public CustomQueue(int size){
         this.size=size;
         this.data = new int[size];
     }
 
-    public boolean enqueue(int val){
+    public boolean enQueue(int val){
         if(rear==size-1) {
             System.out.println("Queue is full");
             return false;
@@ -25,7 +26,7 @@ public class CustomQueue {
         return true;
     }
 
-    public int dequeue(){
+    public int deQueue(){
         if(front > rear){
             System.out.println("Queue is empty");
             return -1;
@@ -40,11 +41,5 @@ public class CustomQueue {
         }
         return data[front];
     }
-
-
-
-
-
-
 
 }
