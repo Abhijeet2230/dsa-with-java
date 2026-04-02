@@ -2,30 +2,30 @@ package array;
 
 import java.util.HashSet;
 
+/**
+ * Problem: Contains Duplicate
+ * Given an integer array 'nums', return true if any value appears at least twice in the array,
+ * and return false if every element is distinct.
+ */
 public class ContainDuplicate {
     public static void main(String[] args) {
-
+        // Example array with duplicates
         int []  arr = {1,2,3,4,5,6,7,7};
         System.out.println(containsDuplicate(arr));
     }
+
     public static boolean containsDuplicate(int[] nums) {
-            HashSet<Integer> set= new HashSet<>();
+        // Use a HashSet to store elements we have seen so far
+        HashSet<Integer> set= new HashSet<>();
 
-//            for(int ele : nums){
-//                if(set.contains(ele)){
-//                    return true;
-//                }
-//                set.add(ele);
-//            }
-//            return false;
-
-            for(int ele : nums){
-                if(!set.add(ele)){ // add returns true if successfully added, if the element already present inside the
-                                   // set it returns false and wont add that element. Set wont allow duplicate
-                    return true;
-                }
+        for(int ele : nums){
+            // HashSet.add() returns false if the element already exists in the set
+            if(!set.add(ele)){ 
+                // Duplicate found
+                return true;
             }
-            return false;
         }
+        // No duplicates found after checking all elements
+        return false;
     }
-
+}
